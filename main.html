@@ -9,9 +9,19 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
+			if (arr.length<2) {
+				return -Infinity;
+			}
+				else if{
+				for (let i = 0; i < arr.length; i++) {
+					arr[i] == arr[i+1]
+				}
+				return -Infinity;
+				}
+			else{
 			//Write your code here
-			for (let i = 0; i < n-1 ; i++) {
-				for (let j = 0; j < n-i-1; j++) {
+			for (let i = 0; i < arr.length-1 ; i++) {
+				for (let j = 0; j < arr.length-i-1; j++) {
 					if (arr[j]>arr[j+1]) {
 						temp = arr[j];
 						arr[j] = arr[j+1];
@@ -19,8 +29,8 @@
 					}
 				}
 			}
-		  return arr[n-1];
-		}
+		  return arr[n-2];
+		}}
 
 		function Main() {
 			var n = prompt("Enter the number of elements");
@@ -30,7 +40,7 @@
 			}
 			alert(secondHighest(arr));
 		}
-		Main();
+		// Main();
 	</script>
 
     <script type="text/javascript" src="./script.js">
